@@ -1,9 +1,9 @@
 import { Game } from './js/game.js';
 
 const game = new Game();
-window.game = game;
+game.render();  // Draw the starting state
 
-function startGame() {
-    console.log("Game started", game);
-}
-window.onload = startGame;
+document.getElementById('new-game').onclick = () => {
+    game.reset();
+    game.render();
+};

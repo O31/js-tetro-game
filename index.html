@@ -4,53 +4,32 @@
     <meta charset="UTF-8" />
     <title>Tetromino Conquest</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module"    src="app.js" defer></script>
+    <script type="module" src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <header>
         <h1>Tetromino Conquest</h1>
-        <button id="toggle-rules">Rules</button>
-        <section id="rules" class="hidden">
-          <h2>How to Play</h2>
-          <ul>
-            <li>The board is filled with colored tetromino pieces (fixed layout).</li>
-            <li>
-              Players take turns selecting a color; all tetrominoes of that color are claimed.
-            </li>
-            <li>The goal: control the most tiles or territory by the end!</li>
-          </ul>
-        </section>
-      </header>
-
-      <main>
         <section class="scoreboard">
-          <div id="player1-info" class="player-info">
+          <div id="player1-info" class="player-info player1-active">
             Player 1: <span id="player1-score">0</span>
           </div>
+          <div id="turn-indicator">Player 1's turn</div>
           <div id="player2-info" class="player-info">
             Player 2: <span id="player2-score">0</span>
           </div>
-          <div id="turn-indicator">Player 1's turn</div>
         </section>
-
-        <section class="game-controls">
-          <div id="color-options">
-            <!-- Color buttons will go here -->
-          </div>
-        </section>
-
+      </header>
+      <main>
         <section>
-          <div id="game-board" class="board">
-            <!-- Grid cells will be rendered here -->
-          </div>
+          <div id="game-board" class="board"></div>
         </section>
       </main>
-
       <footer>
         <button id="new-game">New Game</button>
       </footer>
     </div>
-    <!-- We'll add JavaScript in later steps! -->
+    <script type="module" src="app.js"></script>
   </body>
 </html>
