@@ -60,19 +60,6 @@ export class Board {
             if (this.grid.every(row => row.every(cell => cell.pieceId))) break;
         }
 
-        for (let r = 0; r < GRID_ROWS; r++) {
-            for (let c = 0; c < GRID_COLS; c++) {
-                if (this.grid[r][c].color === null) {
-                    if (r + 1 < GRID_ROWS && c + 1 < GRID_COLS) {
-                        if (this.grid[r + 1][c + 1].color === null) {
-                            console.log("Empty cell at", r, c);
-                        }
-                    }
-                }
-            }
-        }
-
-
         render(onCellClick) {
             const boardDiv = document.getElementById('game-board');
             boardDiv.innerHTML = '';
